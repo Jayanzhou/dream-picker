@@ -3,9 +3,63 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="/layui/css/layui.css" media="all">
+    <script src="/layui/layui.js"></script>
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+  <div class="nav">
+    <ul class="layui-nav " lay-filter="">
+      <li class="layui-nav-item" style="font-size: 25px; margin-right: 100px;">逐梦科技</li>
+      <li class="layui-nav-item"><a href="">首页</a></li>
+      <li class="layui-nav-item layui-this"><a href="">设计案例</a></li>
+      <li class="layui-nav-item"><a href="">设计服务</a></li>
+      <li class="layui-nav-item">
+        <a href="javascript:;">解决方案</a>
+        <dl class="layui-nav-child"> <!-- 二级菜单 -->
+          <dd><a href="">移动模块</a></dd>
+          <dd><a href="">后台模版</a></dd>
+          <dd><a href="">电商平台</a></dd>
+        </dl>
+      </li>
+      <li class="layui-nav-item"><a href="">关于我们</a></li>
+    </ul>
+  </div>
+  <div class="layui-carousel" id="logo_carousel">
+    <div carousel-item>
+      <div class="carousel_0">
+        <img src="/images/carousel_0.png">
+        <div class="container">
+          <h1>您和BAT之间，其实只差一个优美的官网</h1>
+          <h2>逐梦科技</h2>
+        </div>
+      </div>
+      <div>
+        <img src="/images/carousel_1.png">
+      </div>
+      <div>
+        <img src="/images/carousel_2.png">
+      </div>
+    </div>
+  </div>
+    <div class="layui-container no-end">
+        简单爱，未完待续
+    </div>
   </body>
+  <script>
+    layui.use('element', function(){
+      var element = layui.element;
+
+      //…
+    });
+    layui.use('carousel', function(){
+      layui.carousel.render({
+        elem: '#logo_carousel',
+        width: '100%',
+        height: "70vh",
+        arrow: 'always',
+        anim: 'fade',
+        autoplay: true
+      });
+    });
+  </script>
 </html>

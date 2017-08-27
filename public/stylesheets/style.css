@@ -6,3 +6,40 @@ body {
 a {
   color: #00B7FF;
 }
+
+
+/*logo carousel*/
+.layui-carousel img {
+  width: 100vw;
+  height: 80vh;
+}
+.carousel_0 {
+  position: relative;
+}
+.carousel_0 .container{
+  position: absolute;
+  width: 100vw;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  text-align: center;
+}
+.container h1 {
+  font-size: 23px;
+  font-weight: 600;
+}
+.container h2 {
+  margin-top: 15px;
+  font-size: 50px;
+}
+
+.no-end {
+  height: 50vh;
+  text-align: center;
+  font-size: 20px;
+  padding-top: 100px!important;
+  background: #eee;
+  margin-top: 10px!important;
+}
+
