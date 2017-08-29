@@ -10,9 +10,10 @@ gulp.task('testLess', function () {
     gulp.src(['public/less/**/*.less', '!public/less/{reset,variable}.less'])
         .pipe(sourcemaps.init())
         .pipe(less())
+        .pipe(gulp.dest('public/css/'))
         .pipe(cssmin())
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest('public/css/'));
+        .pipe(gulp.dest('public/css-build/'));
 });
 
 gulp.task('lessWatch', function () {
