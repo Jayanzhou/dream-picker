@@ -7,12 +7,12 @@ var gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('testLess', function () {
-    gulp.src(['public/less/**/*.less'])
+    gulp.src(['public/less/**/*.less', '!public/less/{reset,variable}.less'])
         .pipe(sourcemaps.init())
         .pipe(less())
         .pipe(cssmin())
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest('public/stylesheets/'));
+        .pipe(gulp.dest('public/css/'));
 });
 
 gulp.task('lessWatch', function () {
