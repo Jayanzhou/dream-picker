@@ -19,4 +19,6 @@ npm install
 
 npm run start
 
+start another terminal window, run 'gulp lessWatch' to watch the less files and compile
+
 visit: http://localhost:3000
