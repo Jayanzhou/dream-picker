@@ -19,4 +19,10 @@ npm install
 
 npm run start
 
+start another terminal window, run 'gulp lessWatch' to watch the less files and compile
+
 visit: http://localhost:3000
+
+## ui frame
+
+use [layui](http://www.layui.com) as our program ui frame, and all the js module define that follow layui standard.
